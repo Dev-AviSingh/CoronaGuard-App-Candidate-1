@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/machbech"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-black"
+            android:textSize="30sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/heart_rate_graph"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="155dp"/>
+
+                <GridLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:rowCount="1"
+                    android:columnCount="1"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:id="@+id/heart"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:scaleX="0.9"
+                        android:scaleY="0.9"
+                        android:src="@drawable/heart"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:id="@+id/heart_rate_result_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/heart_rate"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:layout_margin="50dp"/>
+                </GridLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:src="#FFFFFF"
+            android:id="@+id/temperature_graph_background"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="40dp"/>
+
+        <ImageView
+            android:src="@drawable/back"
+            android:id="@+id/temperature_graph_white_cover_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"/>
+
+
+        <ImageView
+            android:id="@+id/temperature_graph_foreground"
+            android:src="@drawable/temperature_foreground"
+            android:scaleY="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="40dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="35sp"/>
+
+        <TextView
+            android:id="@+id/temperature_result_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature"
+            android:layout_gravity="bottom|left"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"/>
+
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:padding="5dp">
+    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <ImageView
+                android:id="@+id/mask_status_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/face_silheoutte_masked"
+                android:layout_margin="5dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mask_worn_properly"
+                android:layout_gravity="center"
+                android:textSize="27sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginStart="10sp"
+                android:textColor="@android:color/black"/>
+
+            
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

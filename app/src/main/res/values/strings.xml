@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="heart_rate">%1$d</string>
+    <string name="temperature">Temperature = %1$.2f</string>
+    <string name="machbech">MACHBECH</string>
+    <string name="heart_rate_title">Heart Rate</string>
+    <string name="mask_worn_properly">Mask Worn Properly</string>
+    <string name="mask_not_worn_properly">Mask Not Worn Properly</string>
+</resources>
